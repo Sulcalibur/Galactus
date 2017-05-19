@@ -49,4 +49,12 @@ describe('Events', () => {
   it('.EVENT_HANDLE_CONFIG_CHANGED', () => {
     expect(events.EVENT_HANDLE_CONFIG_CHANGED).to.equal('EVENT_HANDLE_CONFIG_CHANGED');
   });
+
+	it('.EVENT_ANALYTICS_APP_STARTED', () => {
+    expect(events.EVENT_ANALYTICS_APP_STARTED).to.equal('EVENT_APP_STARTED');
+	});
+
+	it('.EVENT_ANALYTICS_MINIFIED', () => {
+    expect(events.EVENT_ANALYTICS_MINIFIED).to.equal('EVENT_MINIFIED');
+	});
 });
