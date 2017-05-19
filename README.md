@@ -1,9 +1,13 @@
 # Galactus <img src="build/icon.ico" width="60">
 
+[![Build Status](https://travis-ci.org/JensDebergh/Galactus.svg?branch=master)](https://travis-ci.org/JensDebergh/Galactus)
+[![Build status](https://ci.appveyor.com/api/projects/status/02hnl4pn97f9um9i?svg=true)](https://ci.appveyor.com/project/JensDebergh/galactus)
+
+
 > Elegant compression desktop app
 
 Galactus is a compression app with many useful features, free and open source!
-Optimize images for the web or just decrease the overall file size to save some space on that ol harddrive.
+Optimize images for the web or just decrease the overall file size to save some space on that ol' harddrive.
 
 **[Discuss it on Product Hunt](https://www.producthunt.com/posts/Galactus-2)**
 
@@ -28,11 +32,11 @@ Optimize images for the web or just decrease the overall file size to save some 
 - JPEG support
 - PNG support
 - SVG optimizer
-- File statistics
-- Cross-platform
-- Silent auto-updates
-- Sounds
-- Touchbar support (coming soon)
+- File statistics 📈
+- Cross-platform ✝
+- Silent auto-updates 🆕
+- Sounds 🔉
+- Touchbar support 🍫 (coming soon)
 
 ## Install
 
