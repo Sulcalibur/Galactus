@@ -1,0 +1,3 @@
+[submodule "app/renderer"]
+	path = app/renderer
+	url = git@gitlab.com:JensDebergh/squash-client.git

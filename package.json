@@ -1,0 +1,77 @@
+{
+  "productName": "Galactus",
+  "name": "Galactus",
+  "version": "1.0.0",
+  "description": "Elegant compression app for files",
+  "author": "Jens Debergh <jensdebergh@gmail.com>",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/JensDebergh/Galactus.git"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "gulp serve",
+    "test": "electron-mocha tests/**/**.spec.js",
+    "dist-renderer": "cd app/renderer && npm install && npm run dist",
+    "dist": "npm run dist-renderer && npm install && build"
+  },
+  "build": {
+    "asar": false,
+    "appId": "com.github.galactus",
+    "mac": {
+      "category": "public.app-category.galactus"
+    },
+    "linux": {
+      "category": "compression",
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "files": [
+      "**/*",
+      "!app/renderer/**/*",
+      "app/renderer/index.html",
+      "app/renderer/dist/index_bundle.js",
+      "app/renderer/assets/**/*",
+      "!*/{tests, build, README.md, gulpfile.js, package.json, media}",
+      "!{tests, build, README.md, gulpfile.js, package.json, media}",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme,test,__tests__,tests,powered-test,example,examples,*.d.ts}",
+      "!**/node_modules/.bin",
+      "!**/*.{o,hprof,orig,pyc,pyo,rbc}",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,__pycache__,thumbs.db,.gitignore,.gitattributes,.editorconfig,.flowconfig,.yarn-metadata.json,.idea,appveyor.yml,.travis.yml,circle.yml,npm-debug.log,.nyc_output,yarn.lock,.yarn-integrity}"
+    ]
+  },
+  "postinstall": "install-app-deps",
+  "license": "ISC",
+  "dependencies": {
+    "electron-is-dev": "^0.1.2",
+    "fs-extra": "^2.1.2",
+    "humanize": "0.0.9",
+    "imagemin": "^5.2.2",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.0",
+    "imagemin-svgo": "^5.2.1",
+    "psd": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "electron": "^1.6.2",
+    "electron-builder": "^17.1.1",
+    "electron-connect": "^0.6.1",
+    "electron-mocha": "^3.4.0",
+    "eslint": "^3.19.0",
+    "gulp": "^3.9.1",
+    "mocha": "^3.3.0"
+  }
+}

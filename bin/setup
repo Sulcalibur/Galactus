@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+# Exit if any subcommand fails
+set -e
+
+if ! command -v npm > /dev/null; then
+  printf "NPM not found. Installation instructions:
+https://github.com/creationix/nvm"
+else
+  printf "Installing main dependencies..."
+  npm install --silent;
+
+  printf "Installing renderer dependencies..."
+  cd app/renderer && npm install --silent;
+  printf "✅ Dependencies installed"
+fi
