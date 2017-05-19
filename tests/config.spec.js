@@ -17,8 +17,7 @@ describe('Config module', () => {
         expect(config).to.deep.equal({
           soundEnabled: true,
           statsEnabled: true,
-          compressionQuality: 80,
-					lastCompressedAt: null
+          compressionQuality: 80
         });
       });
 
@@ -31,8 +30,7 @@ describe('Config module', () => {
       const newConfig = {
         soundEnabled: false,
         statsEnabled: true,
-        compressionQuality: 80,
-				lastCompressedAt: null
+        compressionQuality: 80
       };
 
       setConfig(newConfig).then((updatedConfig) => {
