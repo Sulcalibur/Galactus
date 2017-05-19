@@ -13,6 +13,7 @@ const {
   EVENT_COMPRESSION_DONE,
   EVENT_COMPRESSION_FAILED,
   EVENT_UNSUPPORTED_GALACTUS_FILES,
+	EVENT_ANALYTICS_MINIFIED
 } = require('../lib/events');
 
 const initialiseDropper = () => {
@@ -60,6 +61,8 @@ const initialiseDropper = () => {
       const { statsEnabled } = config;
 
       if (statsEnabled) StatsWriter.write(stats);
+
+			global.analytics.send(EVENT_ANALYTICS_MINIFIED);
 
       event.sender.send(EVENT_COMPRESSION_DONE, { savedSize: stats.savedBytes });
     }

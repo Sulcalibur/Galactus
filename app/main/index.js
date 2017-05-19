@@ -5,6 +5,9 @@ const BrowserManager = require('./browser-manager');
 const DropManager = require('./drop-manager');
 const FileSaveManager = require('./filesave-manager');
 const SettingsManager = require('./settings-manager');
+const {
+	EVENT_ANALYTICS_APP_STARTED
+} = require('../lib/events');
 
 if (isDev) {
   require('electron-connect').client.create()
@@ -14,6 +17,7 @@ let mainWindow = null;
 
 module.exports = {
 	start: () => {
+		global.analytics.send(EVENT_ANALYTICS_APP_STARTED);
 		app.on('ready', function() {
       BrowserManager.start();
       DropManager.start();
