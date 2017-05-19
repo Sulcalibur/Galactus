@@ -1,8 +1,10 @@
 sudo: required
 dist: trusty
 language: c
+osx_image: xcode8
 matrix:
   include:
+    - os: osx
     - os: linux
       env: CC=clang CXX=clang++ npm_config_clang=1
       compiler: clang
@@ -17,7 +19,7 @@ install:
   - npm install
   - npm prune
 script:
-  - npm test
+  - npm run test
   - npm run dist
 branches:
   except:
