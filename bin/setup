@@ -3,14 +3,9 @@
 # Exit if any subcommand fails
 set -e
 
-if ! command -v npm > /dev/null; then
-  printf "NPM not found. Installation instructions:
-https://github.com/creationix/nvm"
-else
-  printf "Installing main dependencies..."
-  npm install --silent;
+# Set up Ruby dependencies via Bundler
+gem install bundler --conservative
+bundle check || bundle install
 
-  printf "Installing renderer dependencies..."
-  cd app/renderer && npm install --silent;
-  printf "✅ Dependencies installed"
-fi
+# Set up node dependencies
+npm install
