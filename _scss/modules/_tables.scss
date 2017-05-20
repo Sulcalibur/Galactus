@@ -1,0 +1,143 @@
+// =============================================================================
+// Tables
+// =============================================================================
+
+// Components
+// =============================================================================
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: $base-border-radius;
+  box-shadow: 0 0 0 1px darken($gray-lighter, 3),
+              0 2px 5px rgba($black, .06);
+
+  .button {
+    padding: 10px 15px;
+  }
+
+  .form-select {
+    width: 100%;
+  }
+
+  input:not([type="submit"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]):not([type="button"]) {
+    padding: 4px 8px;
+    border: 1px solid $gray-lighter;
+    border-radius: $base-border-radius;
+  }
+
+  &.has-action tr:not(.is-edit) td {
+    cursor: pointer;
+  }
+
+  &.has-top-radius tr:first-child td {
+    &:first-of-type {
+      border-top-left-radius: $base-border-radius;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: $base-border-radius;
+    }
+  }
+}
+
+th,
+td {
+  position: relative;
+  z-index: 100;
+  padding: 10px 15px;
+  text-align: left;
+  vertical-align: middle;
+  background-color: $white;
+}
+
+th {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: $gray-lightest;
+  border-top-right-radius: $base-border-radius;
+  border-top-left-radius: $base-border-radius;
+  box-shadow: inset 0 -1px 0 $gray-lighter;
+
+  &.align-right {
+    text-align: right;
+  }
+
+  &.is-large {
+    width: 40%;
+  }
+}
+
+td {
+  box-shadow: inset 0 -1px 0 $gray-lighter;
+
+  &.align-right {
+    text-align: right;
+  }
+}
+
+tr {
+  &:hover td,
+  &.is-edit td {
+    background-color: lighten($gray-lightest, 1);
+  }
+
+  &.is-running td,
+  &.is-running td:hover,
+  &.is-running.is-edit td {
+    background-color: lighten($brand-primary, 43);
+
+    &.table-duration {
+      font-weight: 600;
+    }
+  }
+
+  &:last-child td {
+    box-shadow: none;
+
+    &:first-of-type {
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    &:last-of-type {
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+}
+
+// Descendants
+// =============================================================================
+
+.table-action {
+  width: 140px;
+  text-align: right;
+
+  &.is-small {
+    width: 50px;
+  }
+
+  .button {
+    margin-left: 5px;
+  }
+
+  .fa {
+    font-size: $base-font-size;
+  }
+}
+
+.table-duration {
+  font-size: 22px;
+  font-weight: 500;
+  color: $gray-darker;
+}
+
+.table-title {
+  font-weight: 500;
+  color: $gray-darker;
+}
+
+.table-client {
+  font-weight: 400;
+  color: $gray;
+}

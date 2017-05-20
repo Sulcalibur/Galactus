@@ -1,0 +1,180 @@
+// =============================================================================
+// Forms
+// Based on: https://picturepan2.github.io/spectre/
+// =============================================================================
+
+// Components
+// =============================================================================
+
+form {
+  position: relative;
+  display: block;
+  clear: both;
+}
+
+fieldset {
+  display: block;
+  min-width: 100%;
+  padding: 20px;
+  margin: 0;
+  background-color: $gray-lightest;
+  border: 1px solid $base-border-color;
+  border-radius: $base-border-radius;
+}
+
+label,
+input,
+select,
+textarea {
+  display: inline-block;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  color: $gray-darker;
+  text-transform: uppercase;
+}
+
+.required {
+  color: $brand-danger;
+}
+
+input:not([type="submit"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]):not([type="button"]),
+textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-family: $base-font-family;
+  color: $gray-darkest;
+  background-color: $white;
+  border: 0;
+  border-bottom: 1px solid $gray-lighter;
+  border-radius: 0;
+  transition: border-color $base-transition-speed linear;
+  appearance: none;
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 1000px $white inset;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $brand-primary;
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $gray-lighter;
+
+    &:hover { border-color: $gray-lighter; }
+
+    &:active {
+      border-color: $gray-lighter;
+      outline: none;
+    }
+  }
+}
+
+textarea { resize: vertical; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input[type="file"] { width: 100%; }
+
+// Descendants
+// =============================================================================
+
+.form-item {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+
+  &.is-last {
+    margin-bottom: 0;
+  }
+
+  &.has-danger label {
+    color: $brand-danger;
+  }
+}
+
+.form-input-icon {
+  position: absolute;
+  top: 14px;
+  left: 5px;
+  color: $gray-lighter;
+}
+
+
+// Option
+// =============================================================================
+
+.form-radio {
+  position: relative;
+  display: inline-block;
+  padding: .3rem 2rem;
+  line-height: 1.8rem;
+  cursor: pointer;
+
+  &:hover .form-icon {
+    border-color: darken($base-border-color, 15%);
+  }
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+
+    &:focus + .form-icon {
+      box-shadow: 0 0 0 1px $brand-primary;
+    }
+  }
+
+  input:checked + .form-icon {
+    background: $brand-primary;
+    border-color: $brand-primary;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: .4rem;
+      height: .4rem;
+      margin-top: -.2rem;
+      margin-left: -.2rem;
+      background: $white;
+      border-radius: .2rem;
+      content: "";
+    }
+  }
+
+  .form-icon {
+    position: absolute;
+    top: .5rem;
+    left: 0;
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    padding: 0;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    vertical-align: top;
+    border: .1rem solid $base-border-color;
+    border-radius: .7rem;
+    outline: none;
+    transition: all $base-transition-speed ease;
+  }
+}

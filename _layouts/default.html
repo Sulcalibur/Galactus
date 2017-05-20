@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+        {% include stylesheets.html %}
+    </head>
+    <body>
+      {% include navigation.html %}
+
+      <div class="main-container">
+        <div class="page animated fadeIn">
+        {{ content }}
+        </div>
+      </div>
+
+      {% include javascripts.html %}
+    </body>
+</html>

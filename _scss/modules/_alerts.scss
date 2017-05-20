@@ -1,0 +1,36 @@
+// =============================================================================
+// Alerts
+// =============================================================================
+
+// Settings
+// =============================================================================
+
+@mixin alert-generator($color) {
+  color: $color;
+  background-color: lighten($color, 45);
+}
+
+// Component
+// =============================================================================
+
+.alert {
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  border-radius: $base-border-radius;
+}
+
+// Descendants
+// =============================================================================
+
+.alert-danger {
+  @include alert-generator($brand-danger);
+}
+
+.alert-success {
+  @include alert-generator($brand-success);
+}
+
+.alert-notice {
+  @include alert-generator($brand-warning);
+}
