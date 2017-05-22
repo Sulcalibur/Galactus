@@ -1,0 +1,83 @@
+.footer {
+  min-height: 40px;
+}
+
+.footer-text {
+	-webkit-app-region: drag;
+  width: 100%;
+  text-align: center;
+	font-size: 13px;
+	font-weight: 500;
+	color: #A8A7A8;
+	user-select: none;
+	cursor: default;
+  font-weight: bold;
+  height: 60px;
+}
+
+
+.footer-trigger {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  z-index: 10;
+  position: absolute;
+  bottom: 57px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 13px;
+  color: $white;
+  border-radius: 25px;
+  border: 2px solid $white;
+  padding: 5px 12.5px 5px 12.5px;
+  text-decoration: none;
+  transition: all $base-transition-speed ease-in-out;
+  user-select: none;
+  cursor: pointer;
+
+  &:active, &:focus {
+    color: $white;
+    background-color: $base-background-color;
+  }
+
+  &:hover {
+    color: $base-background-color;
+    background-color: $white;
+    cursor: pointer;
+  }
+}
+
+.footer-settings-trigger {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  z-index: 10;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+
+  font-size: 13px;
+  padding: 6px 6px 6px 6px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+  user-select: none;
+  cursor: pointer;
+  background-color: $brand-primary;
+
+  &:active, &:focus {
+    color: $white;
+  }
+
+  &:hover {
+    color: $base-background-color;
+    background-color: $brand-primary;
+    cursor: pointer;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+}
