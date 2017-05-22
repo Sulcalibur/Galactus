@@ -9,7 +9,7 @@
 Galactus is a compression app with many useful features, free and open source!
 Optimize images for the web or just decrease the overall file size to save some space on that ol' harddrive.
 
-**[Discuss it on Product Hunt](https://www.producthunt.com/posts/Galactus-2)**
+**[Discuss it on Product Hunt](https://www.producthunt.com/posts/galactus)**
 
 <p align="center">
 	<a href="https://github.com/JensDebergh/Galactus/releases/latest">
