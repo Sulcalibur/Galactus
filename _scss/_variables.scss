@@ -5,12 +5,12 @@
 // Typography
 // =============================================================================
 
-$sans-serif: 'Lato', "usual", "usual", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+$sans-serif: Lato, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $serif: Courier, serif;
 $base-font-family: $sans-serif;
-$base-font-weight: 400;
+$base-font-weight: 300;
 $base-font-weight-bold: 700;
-$base-background-color: #f8f8f8;
+$base-background-color: #313131;
 
 // Colors
 // =============================================================================
@@ -32,12 +32,12 @@ $black: #333;
 
 $brand-success: #2bcb1f;
 $brand-danger: #f04f26;
-$brand-primary: rgb(0, 186, 199);
+$brand-primary: #666EE8;
 $brand-warning: #f60;
 
 // Font colors
 
-$base-font-color: $gray-dark;
+$base-font-color: #404040;
 $base-accent-color: $brand-primary;
 $base-accent-highlighted-color: darken($base-accent-color, 15);
 

@@ -1,1 +1,18 @@
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<script>
+$(function() {
+	var downloadButton = $('#download');
+	var link = '';
+	if (navigator.appVersion.indexOf("Win")!=-1){
+		link = $('#windows').attr('href');
+	}else if(navigator.appVersion.indexOf("Linux")!=-1){
+		link = $('#linux').attr('href');
+	}else if(navigator.appVersion.indexOf("Mac")!=-1){
+		link = $('#mac').attr('href');
+	}
+
+	downloadButton.attr('href', link);
+});
+
+</script>
