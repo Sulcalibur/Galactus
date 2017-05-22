@@ -91,7 +91,7 @@ $ npm run dist
 
 ## Disclaimer
 
-Most assets in this app are shamingly 😞 stolen from [Squash](https://www.realmacsoftware.com/squash/) an amazing compression app for mac. All rights reserved to the original owners.
+Most assets in this app are shamingly 😞 used from [Squash](https://www.realmacsoftware.com/squash/) an amazing compression app for mac. All rights reserved to the original owners.
 
 Galactus is a third-party app and is not affiliated with [Squash](https://www.realmacsoftware.com/squash/).
 
