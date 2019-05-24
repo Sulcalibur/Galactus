@@ -60,7 +60,7 @@
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-pngquant": "^5.0.0",
+    "imagemin-pngquant": "^7.0.0",
     "imagemin-svgo": "^5.2.1",
     "psd": "^3.1.0"
   },
