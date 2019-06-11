@@ -67,7 +67,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "electron": "^1.6.2",
+    "electron": "^2.0.18",
     "electron-builder": "^17.1.1",
     "electron-connect": "^0.6.1",
     "electron-mocha": "^3.4.0",
